@@ -1,2 +1,1 @@
-# doughnutresearch
-Website repo for Doughnut Research
+Landing page for dougnut research.

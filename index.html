@@ -1,1 +1,149 @@
-<h1>Hello World</h1>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doughnut Research</title>
+<meta name="description" content="Doughnut Research uses proprietary technology developed at Carnegie Mellon to ensure that human data is genuinely human at the source, rather than filtered after the fact.">
+<meta property="og:title" content="Doughnut Research">
+<meta property="og:description" content="Human data made fresh.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="doughnut.png">
+<link rel="icon" href="doughnut.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap">
+<style>
+  :root{
+    --cream:#F7F4EE;
+    --brown:#5A0A00;
+    --orange:#E6944C;
+    --white:#FFFFFF;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{overflow-x:hidden}
+  body{
+    min-height:100vh;
+    min-height:100dvh;
+    display:flex;
+    flex-direction:column;
+    background:var(--cream);
+    color:var(--brown);
+    font-family:Poppins,"Avenir Next","Helvetica Neue",Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .bar{
+    background:var(--white);
+    flex:0 0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  .bar.top{
+    padding:.85rem 1.25rem;
+    font-size:clamp(.78rem,1.6vw,.95rem);
+    font-weight:600;
+    letter-spacing:.01em;
+  }
+  .bar.top a{
+    color:var(--brown);
+    text-decoration:none;
+    border-bottom:2px solid var(--orange);
+    padding-bottom:1px;
+  }
+  .bar.top a:hover,.bar.top a:focus-visible{color:var(--orange)}
+  .bar.top a:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+  .bar.bottom{padding:1.05rem 1.25rem;display:block}
+  .partners{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(1rem,3.5vw,3rem);
+  }
+  .partners img{
+    height:clamp(26px,3.1vw,40px);
+    width:auto;
+    display:block;
+  }
+  .cmu{display:flex;align-items:center;gap:clamp(.5rem,1.2vw,.9rem)}
+  .cmu img.seal{height:clamp(32px,3.9vw,50px)}
+
+  main{
+    flex:1 1 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:2.5rem 1.5rem;
+  }
+  .lockup{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:clamp(1.25rem,4vw,3.5rem);
+    max-width:1150px;
+    width:100%;
+  }
+  .mark{
+    width:clamp(150px,25vw,400px);
+    height:auto;
+    flex:0 0 auto;
+    display:block;
+  }
+  h1{
+    margin:0;
+    font-weight:700;
+    font-size:clamp(2.4rem,8.5vw,6.5rem);
+    line-height:.94;
+    letter-spacing:-.035em;
+  }
+  .tag{
+    margin:clamp(.5rem,1.4vw,1rem) 0 0;
+    color:var(--orange);
+    font-weight:700;
+    font-size:clamp(.95rem,2.7vw,2.05rem);
+    letter-spacing:-.015em;
+  }
+
+  @media (max-width:720px){
+    main{padding:2rem 1rem}
+    .lockup{flex-direction:column;gap:1.4rem;text-align:center}
+    h1{font-size:clamp(1.75rem,10.5vw,3rem)}
+    .tag{font-size:clamp(.85rem,4.1vw,1.25rem)}
+    .mark{width:min(55vw,230px)}
+    .bar.bottom{padding:.85rem .9rem}
+  }
+</style>
+</head>
+<body>
+
+  <header class="bar top">
+    <span>contact:&nbsp;<a href="mailto:info@doughnutresearch.com">info@doughnutresearch.com</a></span>
+  </header>
+
+  <main>
+    <div class="lockup">
+      <img class="mark" src="doughnut.png"
+           alt="Doughnut Research logo: a sprinkled doughnut under a striped shop awning">
+      <div class="words">
+        <h1>doughnut<br>research</h1>
+        <p class="tag">human data made fresh</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bar bottom">
+    <div class="partners">
+      <span class="cmu">
+        <img class="seal" src="logo-cmu-seal.png" alt="Carnegie Mellon University">
+        <img src="logo-swartz.png" alt="Swartz Center for Entrepreneurship">
+      </span>
+      <img src="logo-cylab.png" alt="CyLab Security and Privacy Institute">
+      <img src="logo-dietrich.png" alt="Dietrich College of Humanities and Social Sciences">
+    </div>
+  </footer>
+
+</body>
+</html>
