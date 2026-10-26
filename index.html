@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Doughnut Research</title>
-<meta name="description" content="Doughnut Research uses proprietary technology developed at Carnegie Mellon to ensure that human data is genuinely human at the source, rather than filtered after the fact.">
+<meta name="description" content="Data obtained using genuine humans. Doughnut Research collects research data from real, verified people.">
 <link rel="canonical" href="https://doughnutresearch.com/">
 
 <!-- Favicons (doughnut on the site's cream background) -->
@@ -19,7 +19,7 @@
 <!-- Link previews -->
 <meta property="og:site_name" content="Doughnut Research">
 <meta property="og:title" content="Doughnut Research">
-<meta property="og:description" content="Human data made fresh.">
+<meta property="og:description" content="Data obtained using genuine humans.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://doughnutresearch.com/">
 <meta property="og:image" content="https://doughnutresearch.com/og-image.png">
@@ -30,143 +30,249 @@
 <meta property="og:image:alt" content="Doughnut Research logo: a sprinkled doughnut under a striped shop awning, beside the words doughnut research, human data made fresh">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Doughnut Research">
-<meta name="twitter:description" content="Human data made fresh.">
+<meta name="twitter:description" content="Data obtained using genuine humans.">
 <meta name="twitter:image" content="https://doughnutresearch.com/og-image.png">
 <meta name="twitter:image:alt" content="Doughnut Research logo: a sprinkled doughnut under a striped shop awning, beside the words doughnut research, human data made fresh">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
 <style>
   :root{
-    --cream:#F7F4EE;
-    --brown:#5A0A00;
-    --orange:#E6944C;
+    --cream:#F6F2EC;
     --white:#FFFFFF;
+    --ink:#1C1C1E;
+    --muted:#6B6B70;
+    --coral:#E8553E;
+    --coral-dark:#C9432E;
+    --brown:#5A0A00;
+    --line:#E7E1D8;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0}
-  html{overflow-x:hidden}
+  html{overflow-x:hidden;scroll-behavior:smooth}
   body{
-    min-height:100vh;
-    min-height:100dvh;
-    display:flex;
-    flex-direction:column;
-    background:var(--cream);
-    color:var(--brown);
+    background:var(--white);
+    color:var(--ink);
     font-family:Poppins,"Avenir Next","Helvetica Neue",Arial,sans-serif;
+    font-size:1.0625rem;
+    line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 clamp(1rem,4vw,2.5rem)}
 
-  .bar{
-    background:var(--white);
-    flex:0 0 auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  }
-  .bar.top{
-    padding:.85rem 1.25rem;
-    font-size:clamp(.78rem,1.6vw,.95rem);
-    font-weight:600;
-    letter-spacing:.01em;
-  }
-  .bar.top a{
-    color:var(--brown);
-    text-decoration:none;
-    border-bottom:2px solid var(--orange);
-    padding-bottom:1px;
-  }
-  .bar.top a:hover,.bar.top a:focus-visible{color:var(--orange)}
-  .bar.top a:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
-  .bar.bottom{padding:1.05rem 1.25rem;display:block}
-  .partners{
-    display:flex;
-    flex-wrap:wrap;
-    align-items:center;
-    justify-content:center;
-    gap:clamp(1rem,3.5vw,3rem);
-  }
-  .partners img{
-    height:clamp(26px,3.1vw,40px);
-    width:auto;
-    display:block;
-  }
-  .cmu{display:flex;align-items:center;gap:clamp(.5rem,1.2vw,.9rem)}
-  .cmu img.seal{height:clamp(32px,3.9vw,50px)}
+  /* Header */
+  .site-head{padding:1.1rem 0;border-bottom:1px solid var(--line)}
+  .site-head .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+  .brand{display:flex;align-items:center;gap:.65rem;text-decoration:none;color:var(--brown)}
+  .brand img{width:44px;height:auto}
+  .brand span{font-weight:700;font-size:1.15rem;line-height:.95;letter-spacing:-.02em}
+  .nav{display:flex;gap:clamp(.75rem,2.5vw,1.75rem);font-size:.92rem;font-weight:500}
+  .nav a{text-decoration:none}
+  .nav a:hover,.nav a:focus-visible{color:var(--coral)}
+  @media (max-width:640px){.nav a:not(.nav-cta){display:none}}
+  .nav-cta{color:var(--coral);font-weight:600}
 
-  main{
-    flex:1 1 auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:2.5rem 1.5rem;
-  }
-  .lockup{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:clamp(1.25rem,4vw,3.5rem);
-    max-width:1150px;
-    width:100%;
-  }
-  .mark{
-    width:clamp(150px,25vw,400px);
-    height:auto;
-    flex:0 0 auto;
-    display:block;
-  }
+  /* Hero */
+  .hero{padding:clamp(3rem,8vw,6rem) 0 clamp(2.5rem,6vw,4.5rem)}
   h1{
-    margin:0;
-    font-weight:700;
-    font-size:clamp(2.4rem,8.5vw,6.5rem);
-    line-height:.94;
+    margin:0 0 1.25rem;
+    font-weight:800;
+    font-size:clamp(2.3rem,7vw,5rem);
+    line-height:1.02;
     letter-spacing:-.035em;
   }
-  .tag{
-    margin:clamp(.5rem,1.4vw,1rem) 0 0;
-    color:var(--orange);
-    font-weight:700;
-    font-size:clamp(.95rem,2.7vw,2.05rem);
-    letter-spacing:-.015em;
-  }
+  .lead{margin:0;max-width:62ch;font-size:clamp(1.05rem,1.9vw,1.3rem);line-height:1.55}
+  .lead strong{color:var(--coral);font-weight:600}
 
-  @media (max-width:720px){
-    main{padding:2rem 1rem}
-    .lockup{flex-direction:column;gap:1.4rem;text-align:center}
-    h1{font-size:clamp(1.75rem,10.5vw,3rem)}
-    .tag{font-size:clamp(.85rem,4.1vw,1.25rem)}
-    .mark{width:min(55vw,230px)}
-    .bar.bottom{padding:.85rem .9rem}
+  /* Avenues */
+  .band{background:var(--cream);padding:clamp(2.5rem,6vw,4.5rem) 0}
+  h2{margin:0 0 1.5rem;font-weight:700;font-size:clamp(1.35rem,2.6vw,1.75rem);letter-spacing:-.015em;line-height:1.25}
+  .grid{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:clamp(1rem,2.5vw,1.75rem);align-items:stretch}
+  .card{background:var(--white);padding:1.25rem 1.5rem 1.6rem}
+  .card img{width:100%;aspect-ratio:1517/1037;object-fit:contain;margin-bottom:1rem}
+  .card h3{margin:0 0 .35rem;font-size:1.3rem;font-weight:700;letter-spacing:-.01em}
+  .card p{margin:0}
+  .partners-cta{
+    background:var(--coral);color:var(--white);
+    padding:clamp(1.5rem,3vw,2.5rem);
+    display:flex;flex-direction:column;
   }
+  .partners-cta h3{margin:0 0 1rem;font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.025em;line-height:1.1}
+  .partners-cta ul{margin:0 0 1.5rem;padding-left:1.2rem;font-size:1.08rem}
+  .partners-cta li{margin-bottom:.8rem}
+  .partners-cta .contact{margin-top:auto;font-size:1.15rem;line-height:1.35}
+  .partners-cta .contact a{display:inline-block;font-weight:700;font-size:clamp(1rem,1.55vw,1.2rem);overflow-wrap:anywhere;text-decoration:none;border-bottom:2px solid rgba(255,255,255,.6)}
+  .partners-cta .contact a:hover,.partners-cta .contact a:focus-visible{border-color:var(--white)}
+  @media (max-width:960px){
+    .grid{grid-template-columns:1fr 1fr}
+    .partners-cta{grid-column:1 / -1}
+  }
+  @media (max-width:620px){.grid{grid-template-columns:1fr}}
+
+  /* Newsletter */
+  .newsletter{padding:clamp(3rem,7vw,5rem) 0;text-align:center}
+  .kicker{display:inline-block;margin-bottom:.75rem;padding:.25rem .8rem;border-radius:999px;background:var(--cream);color:var(--brown);font-size:.85rem;font-weight:600;letter-spacing:.02em}
+  .newsletter h2{font-size:clamp(1.7rem,3.6vw,2.5rem);margin-bottom:.75rem;letter-spacing:-.025em}
+  .newsletter p{margin:0 auto 1.75rem;max-width:56ch;color:var(--muted)}
+  .btn{
+    display:inline-flex;align-items:center;gap:.5rem;
+    background:var(--coral);color:var(--white);
+    padding:.95rem 1.9rem;border-radius:999px;
+    font-weight:600;font-size:1.05rem;text-decoration:none;
+    transition:background .15s ease, transform .15s ease;
+  }
+  .btn:hover,.btn:focus-visible{background:var(--coral-dark);transform:translateY(-1px)}
+  .btn:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+  .fineprint{margin-top:1rem !important;font-size:.85rem}
+
+  /* Team */
+  .team{background:var(--cream);padding:clamp(2.5rem,6vw,4rem) 0}
+  .team h2{margin-bottom:.6rem}
+  .team-intro{margin:0 0 2.25rem;max-width:62ch}
+  .people{--cols:4;--gap:clamp(1.25rem,3vw,2rem);display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(2rem,4vw,2.75rem) var(--gap);text-align:center}
+  .person{flex:0 0 calc((100% - (var(--cols) - 1) * var(--gap)) / var(--cols))}
+  .person img{width:112px;height:112px;border-radius:50%;margin:0 auto .85rem;object-fit:cover}
+  .person h3{margin:0 0 .3rem;font-size:1.02rem;font-weight:700}
+  .person p{margin:0;font-size:.82rem;line-height:1.5;color:var(--muted)}
+  @media (max-width:900px){.people{--cols:2;row-gap:2.25rem}}
+  @media (max-width:440px){.people{--cols:1}}
+
+  /* Footer */
+  .site-foot{padding:2rem 0 2.5rem}
+  .site-foot .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.75rem}
+  .foot-brand{display:flex;align-items:center;gap:.8rem;color:var(--brown);text-decoration:none}
+  .foot-brand img{width:64px}
+  .foot-brand span{font-weight:700;font-size:1.6rem;line-height:.92;letter-spacing:-.03em}
+  .logos{display:flex;flex-wrap:wrap;align-items:center;gap:clamp(1rem,3vw,2.25rem)}
+  .logos img{height:36px;width:auto}
+  .logos img.unitmark,.logos img.dietrich{height:54px}
+  .copyright{width:100%;margin:0;font-size:.8rem;color:var(--muted)}
 </style>
 </head>
 <body>
 
-  <header class="bar top">
-    <span>contact:&nbsp;<a href="mailto:info@doughnutresearch.com">info@doughnutresearch.com</a></span>
-  </header>
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Doughnut Research, back to top">
+      <img src="img/doughnut.webp" alt="">
+      <span>doughnut<br>research</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#approach">Approach</a>
+      <a href="#partners">Partners</a>
+      <a href="#team">Team</a>
+      <a class="nav-cta" href="#newsletter">Newsletter</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <div class="lockup">
-      <img class="mark" src="doughnut.png"
-           alt="Doughnut Research logo: a sprinkled doughnut under a striped shop awning">
-      <div class="words">
-        <h1>doughnut<br>research</h1>
-        <p class="tag">human data made fresh</p>
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <h1>Data obtained using<br>genuine humans.</h1>
+      <p class="lead"><strong>Tired of low-quality data and increasing amounts of bots?</strong><br>By controlling the conditions under which data is created, we collect data from real, attentive, verified people. <em>Not unauthorized technologies.</em></p>
+    </div>
+  </section>
+
+  <section class="band" id="approach">
+    <div class="wrap">
+      <h2>We are developing two primary avenues of reaching participants:</h2>
+      <div class="grid">
+        <article class="card">
+          <img src="img/illus-own-device.webp" alt="Line drawing of a person holding a tablet showing a survey, with a driver's license nearby and their gaze being tracked">
+          <h3>On their own device</h3>
+          <p>Verified once in person, then re-authenticated by biometrics with real-time attention tracking. Participants fill out surveys for pay in the privacy of their home or when they're out and about.</p>
+        </article>
+        <article class="card">
+          <img src="img/illus-hardware.webp" alt="Line drawing of a person completing a survey at a kiosk tablet inside a café">
+          <h3>On hardware we control</h3>
+          <p>Placed where people already gather, such as a campus, a café or a library, for controlled studies. Participants earn money while taking a break or waiting for their appointment.</p>
+        </article>
+        <aside class="partners-cta" id="partners">
+          <h3>We need partners!</h3>
+          <ul>
+            <li>Could your organization host us to collect data in your space, anywhere that people already gather?</li>
+            <li>Does your organization need verified human data now, from surveys to AI evaluation data?</li>
+          </ul>
+          <p class="contact">Get in touch now:<br><a href="mailto:info@doughnutresearch.com">info@doughnutresearch.com</a></p>
+        </aside>
       </div>
     </div>
-  </main>
+  </section>
 
-  <footer class="bar bottom">
-    <div class="partners">
-      <span class="cmu">
-        <img class="seal" src="logo-cmu-seal.png" alt="Carnegie Mellon University">
-        <img src="logo-swartz.png" alt="Swartz Center for Entrepreneurship">
-      </span>
-      <img src="logo-cylab.svg" alt="CyLab Security and Privacy Institute">
-      <img src="logo-dietrich.png" alt="Dietrich College Department of Social and Decision Sciences">
+  <section class="newsletter" id="newsletter">
+    <div class="wrap">
+      <span class="kicker">Fresh batch coming soon</span>
+      <h2>We're still cooking up our newsletter.</h2>
+      <p>Sign up and we'll send you something by the end of the year. Tell us how you'd like to be involved, whether as a survey researcher, survey participant, kiosk host or investor.</p>
+      <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSd66EvKZli0jcdnDKlbzBIm2QZhZobmwSRzESdpBU2__Pk9MQ/viewform" target="_blank" rel="noopener">Subscribe to the newsletter <span aria-hidden="true">&rarr;</span></a>
+      <p class="fineprint">Opens a short Google Form in a new tab.</p>
     </div>
-  </footer>
+  </section>
+
+  <section class="team" id="team">
+    <div class="wrap">
+      <h2>Team</h2>
+      <p class="team-intro">We are behavioral scientists, cybersecurity experts and computer scientists at Carnegie Mellon University, with decades of combined experience collecting data from real people.</p>
+      <div class="people">
+        <div class="person">
+          <img src="img/alexandra-bremers.webp" alt="Alexandra Bremers">
+          <h3>Alexandra Bremers</h3>
+          <p>Innovation Commercialization Fellow, Swartz Center for Entrepreneurship<br>Postdoctoral Fellow, Social and Decision Sciences</p>
+        </div>
+        <div class="person">
+          <img src="img/julie-downs.webp" alt="Julie Downs">
+          <h3>Julie Downs</h3>
+          <p>Professor and Department Head, Department of Social and Decision Sciences<br>Director, Center for Risk Perception and Communication</p>
+        </div>
+        <div class="person">
+          <img src="img/lorrie-cranor.webp" alt="Lorrie Cranor">
+          <h3>Lorrie Cranor</h3>
+          <p>Director and Bosch Distinguished Professor in Security and Privacy Technologies, CyLab Security and Privacy Institute<br>FORE Systems University Professor, Engineering &amp; Public Policy and Computer Science (Software and Societal Systems)</p>
+        </div>
+        <div class="person">
+          <img src="img/lujo-bauer.webp" alt="Lujo Bauer">
+          <h3>Lujo Bauer</h3>
+          <p>Professor, Electrical and Computer Engineering<br>Professor, Computer Science (Software and Societal Systems)</p>
+        </div>
+        <div class="person">
+          <img src="img/mandy-lanyon.webp" alt="Mandy Lanyon">
+          <h3>Mandy Lanyon</h3>
+          <p>Research Associate II, Social and Decision Sciences</p>
+        </div>
+        <div class="person">
+          <img src="img/lily-klucinec.webp" alt="Lily Klucinec">
+          <h3>Lily Klucinec</h3>
+          <p>PhD Student, Societal Computing Program</p>
+        </div>
+        <div class="person">
+          <img src="img/ramon-silvera-zumaran.webp" alt="Ramon Silvera Zumaran">
+          <h3>Ramon Silvera Zumaran</h3>
+          <p>PhD Student, Social and Decision Sciences</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <a class="foot-brand" href="#top" aria-label="Doughnut Research, back to top">
+      <img src="img/doughnut.webp" alt="">
+      <span>doughnut<br>research</span>
+    </a>
+    <div class="logos">
+      <img class="unitmark" src="img/logo-swartz.svg" alt="Carnegie Mellon University Swartz Center for Entrepreneurship">
+      <img class="dietrich unitmark" src="img/logo-dietrich.svg" alt="Dietrich College Department of Social and Decision Sciences">
+      <img src="img/logo-cylab.svg" alt="CyLab Security and Privacy Institute">
+    </div>
+    <p class="copyright">&copy; 2026 Doughnut Research &middot; <a href="mailto:info@doughnutresearch.com">info@doughnutresearch.com</a></p>
+  </div>
+</footer>
 
 </body>
 </html>
